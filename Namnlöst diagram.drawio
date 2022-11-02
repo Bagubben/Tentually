@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-10-31T14:35:10.671Z" agent="5.0 (Macintosh)" etag="lasPwkKBxX3F46xLG9jS" version="20.5.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-02T12:09:39.306Z" agent="5.0 (Macintosh)" etag="5ezK5neDklXVcNGncW8v" version="20.5.1" type="github">
   <diagram id="n5I5L5vB3KYrBfXEJfVW" name="Sida-2">
-    <mxGraphModel dx="1650" dy="819" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="1090" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -450,6 +450,87 @@
         </mxCell>
         <mxCell id="pny8UysAMAkQgrJ7bddp-65" style="text;strokeColor=none;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;rounded=1;labelBackgroundColor=none;strokeWidth=17;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=22;fontColor=#FFFFFF;gradientColor=none;" parent="pny8UysAMAkQgrJ7bddp-54" vertex="1">
           <mxGeometry y="210" width="430" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#597789;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="39" y="3080" width="760" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="39" y="3080" width="760" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-3" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="153" y="3095" width="570" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-4" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="49" y="3095" width="15" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-5" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="79" y="3095" width="15" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-6" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="109" y="3095" width="15" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-13" value="&lt;span style=&quot;background-color: transparent;&quot;&gt;http://www.frontwalker.se&lt;/span&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;labelBackgroundColor=#F5F5F5;strokeWidth=1;fontFamily=Courier New;fontSize=22;fontColor=none;opacity=70;" vertex="1" parent="1">
+          <mxGeometry x="153" y="3090" width="350" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-14" value="" style="rounded=0;whiteSpace=wrap;html=1;fillStyle=solid;fillColor=#1B3847;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="39" y="3140" width="761" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-15" value="&lt;font style=&quot;font-size: 19px;&quot; color=&quot;#E37200&quot;&gt;Tentually&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fillStyle=solid;" vertex="1" parent="1">
+          <mxGeometry x="40" y="3140" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-16" value="&lt;font data-font-src=&quot;&lt;link href=&amp;quot;https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&amp;amp;display=swap&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&gt;&quot; style=&quot;font-size: 15px;&quot; face=&quot;public san&quot; color=&quot;#FFFFFF&quot;&gt;Home&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;&lt;font color=&quot;#ED7700&quot;&gt;Admin&lt;/font&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;Användare&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;Bokningar&lt;br&gt;&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fillStyle=solid;fontFamily=Zilla Slab medium;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DZilla%2BSlab%2Bmedium;fontSize=19;fontColor=#E37200;" vertex="1" parent="1">
+          <mxGeometry x="245" y="3140" width="350" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-17" value="" style="rounded=0;whiteSpace=wrap;html=1;fillStyle=solid;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=15;fontColor=#ED7700;fillColor=#283852;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="39" y="3180" width="141" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-18" value="&lt;div align=&quot;left&quot;&gt;&lt;p&gt;&lt;b&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;Administrera&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;p&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;Översikt &amp;gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;p&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;Kalender &lt;/font&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;&amp;gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;Bokning ⌄&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;p&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;&lt;span style=&quot;&quot;&gt;	&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;b&gt;Visa&lt;/b&gt;&lt;/span&gt;&lt;/span&gt; &amp;gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;p&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;&lt;span style=&quot;&quot;&gt;	&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;ändra&lt;/span&gt; &amp;gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;p&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;ta bort &amp;gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;p&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;Användare &lt;/font&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;⌄&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;p&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;lägg till &amp;gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;p&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;redigera &amp;gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;p&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;ta bort &amp;gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;p&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;Logga ut&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;p&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;p&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;p&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;/div&gt;" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fillStyle=solid;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=15;fontColor=#ED7700;" vertex="1" parent="1">
+          <mxGeometry x="49" y="3165" width="110" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-22" value="    Användare        Bokning        Datum            Tid        Status          Meddelande  " style="swimlane;fillStyle=solid;strokeColor=#283852;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=15;fontColor=#FFFFFF;fillColor=#283852;startSize=23;align=left;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="195.14" y="3240" width="586" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-24" value="Partytält" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=0;fillStyle=solid;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="ZeS3sgsaaOXCV3SEROeg-22">
+          <mxGeometry x="104.86" y="40" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-25" value="Jan 3-6/-23" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=0;fillStyle=solid;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="ZeS3sgsaaOXCV3SEROeg-22">
+          <mxGeometry x="190.86" y="40" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-26" value="-" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=0;fillStyle=solid;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="ZeS3sgsaaOXCV3SEROeg-22">
+          <mxGeometry x="280.86" y="40" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-27" value="Bokad" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=0;fillStyle=solid;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="ZeS3sgsaaOXCV3SEROeg-22">
+          <mxGeometry x="330.86" y="40" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-30" value="Partytält" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=0;fillStyle=solid;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="ZeS3sgsaaOXCV3SEROeg-22">
+          <mxGeometry x="104.86" y="70" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-31" value="Mars 29-31" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=0;fillStyle=solid;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="ZeS3sgsaaOXCV3SEROeg-22">
+          <mxGeometry x="190.86" y="70" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-32" value="-" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=0;fillStyle=solid;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="ZeS3sgsaaOXCV3SEROeg-22">
+          <mxGeometry x="280.86" y="70" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-33" value="Bokad" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=0;fillStyle=solid;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="ZeS3sgsaaOXCV3SEROeg-22">
+          <mxGeometry x="330.86" y="70" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-34" value="Alla är bjudna!" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=0;fillStyle=solid;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="ZeS3sgsaaOXCV3SEROeg-22">
+          <mxGeometry x="400.86" y="40" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-35" value="Öppen bar.." style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=0;fillStyle=solid;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="ZeS3sgsaaOXCV3SEROeg-22">
+          <mxGeometry x="400.86" y="70" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-23" value="&lt;div align=&quot;left&quot;&gt;⚬ Måns&lt;br&gt;&lt;/div&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=0;fillStyle=solid;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="ZeS3sgsaaOXCV3SEROeg-22">
+          <mxGeometry x="14.860000000000014" y="40" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-29" value="&lt;div align=&quot;left&quot;&gt;⚬ Tobias&lt;br&gt;&lt;/div&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=0;fillStyle=solid;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=15;fontColor=#FFFFFF;" vertex="1" parent="ZeS3sgsaaOXCV3SEROeg-22">
+          <mxGeometry x="9.860000000000014" y="70" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-38" value="&lt;div align=&quot;left&quot;&gt;&lt;h4&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;Bokningar&lt;/font&gt;&lt;/h4&gt;&lt;/div&gt;" style="text;html=1;resizable=0;autosize=1;align=left;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;shadow=0;fillStyle=solid;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=19;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="195.14" y="3165" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ZeS3sgsaaOXCV3SEROeg-39" value="&lt;font color=&quot;#597789&quot;&gt;+ Ny bokning&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;fillStyle=solid;strokeColor=none;fontFamily=public san;fontSource=%3Clink%20href%3D%22https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DPublic%2BSans%3Awght%40300%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E;fontSize=19;fontColor=#FFFFFF;fillColor=#E6E6E6;" vertex="1" parent="1">
+          <mxGeometry x="195.14" y="3450" width="124.86" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
