@@ -1,12 +1,11 @@
 import './assets/scss/App.scss'
+import LandingPage from './pages/LandingPage'
 
 function App() {
 
 	return (
 		<div className="App">
-			<h1 className='heading'>Tentually</h1>
-
-			<p>Hejsan alla tältbokare</p>
+			<LandingPage />
 		</div>
 	)
 }

@@ -1,9 +1,18 @@
+/* Import for fonts Zilla Slab and Public Sans, as well as Bootstrap styles */
 @import 'bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap');
 
+/* Colors related to Frontwalker */
 $base-color-darkblue: #1B3847;
 $base-color-bronze: #BA9657;
+
+/* Genral styles */
+* {
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Zilla Slab', serif;
@@ -13,11 +22,74 @@ p {
 	font-family: 'Public Sans', sans-serif;
 }
 
-.App {
-	background-color: $base-color-darkblue;
-	color: white;
-}
-
 .heading {
 	color: $base-color-bronze;
 }
+
+/* Landing page styles */
+.content {
+	height: 100vh;
+
+	.background {
+		background-color: $base-color-darkblue;
+		height: 60vh;
+		width: 100vw;
+		z-index: -99999;
+		position: fixed;
+	}
+
+	.hero {
+		height: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.header {
+		color: white;
+
+		h1 {
+			font-size: 40px;
+		}
+	}
+
+	.movie-player {
+		border: 5px solid white;
+		background-color: #AEB1B3;
+		height: 275px;
+		width: 275px;
+		margin: 15px 0px 30px 0px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.play-icon {
+			height: 50px;
+			width: 50px;
+		}
+	}
+
+	button {
+		background-color: $base-color-bronze;
+		padding: 15px;
+		width: 180px;
+		border: none;
+
+		p {
+			color: white;
+			font-size: 24px;
+			margin: 0px;
+		}
+	}
+
+	.footer {
+		position: absolute;
+		bottom: 10px;
+		color: $base-color-darkblue;
+		font-size: 20px;
+	}
+}
+
