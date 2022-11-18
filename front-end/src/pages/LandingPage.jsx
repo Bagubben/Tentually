@@ -1,6 +1,9 @@
 // import Button from 'react-bootstrap/Button'
+import { useNavigate } from 'react-router-dom'
 
 const LandingPage = () => {
+	const navigate = useNavigate()
+
 	return (
 		<div className="content">
 			<div className="background"></div>
@@ -14,7 +17,9 @@ const LandingPage = () => {
 					<img className="play-icon" src="../public/assets/circle-play-regular.svg" alt="play-icon" />
 				</div>
 
-				<button className='button'>
+				<button className='button' onClick={() => {
+					navigate("/produkter")
+				}}>
 					<p> Gå vidare </p>
 				</button>
 
