@@ -1,0 +1,23 @@
+@import 'bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap');
+
+$base-color-darkblue: #1B3847;
+$base-color-bronze: #BA9657;
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Zilla Slab', serif;
+}
+
+p {
+	font-family: 'Public Sans', sans-serif;
+}
+
+.App {
+	background-color: $base-color-darkblue;
+	color: white;
+}
+
+.heading {
+	color: $base-color-bronze;
+}
