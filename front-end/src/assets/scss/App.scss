@@ -9,17 +9,32 @@ $base-color-bronze: #BA9657;
 
 /* Genral styles */
 * {
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Zilla Slab', serif;
+	color: $base-color-darkblue
 }
 
 p {
 	font-family: 'Public Sans', sans-serif;
+}
+
+button {
+	background-color: $base-color-bronze;
+	border: none;
+
+	padding: 15px;
+	width: 180px;
+
+	p {
+		color: white;
+		font-size: 24px;
+		margin: 0px;
+	}
 }
 
 .heading {
@@ -32,10 +47,11 @@ p {
 
 	.background {
 		background-color: $base-color-darkblue;
+		position: fixed;
+
 		height: 60vh;
 		width: 100vw;
 		z-index: -99999;
-		position: fixed;
 	}
 
 	.hero {
@@ -72,24 +88,121 @@ p {
 		}
 	}
 
-	button {
-		background-color: $base-color-bronze;
-		padding: 15px;
-		width: 180px;
-		border: none;
+	.footer {
+		position: absolute;
+		color: $base-color-darkblue;
 
-		p {
-			color: white;
+		bottom: 10px;
+		font-size: 20px;
+	}
+}
+
+/* Product overview styles */
+.products {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	height: 100vh;
+	width: 100vw;
+
+	.items {
+		width: 100%;
+		margin-bottom: 10px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	h2 {
+		margin: 10px 0px 0px 0px;
+		font-size: 30px;
+	}
+
+	p {
+		font-size: 22px;
+		margin-bottom: 0px;
+	}
+
+	.card {
+		width: 90%;
+		height: 100px;
+		margin: 10px 0px 5px 0px;
+		padding: 0px 20px 0px 20px;
+		border: none;
+		box-shadow: 1px 1px 5px black;
+
+		background-color: #DFDFDF;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		h4 {
 			font-size: 24px;
-			margin: 0px;
+			width: 150px;
+
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+			word-break: break-word;
+		}
+
+		img {
+			height: 30px;
+			width: 30px;
 		}
 	}
 
 	.footer {
 		position: absolute;
 		bottom: 10px;
-		color: $base-color-darkblue;
+		width: 90%;
 		font-size: 20px;
+
+		color: #1B3847;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		img {
+			height: 30px;
+			width: 30px;
+		}
 	}
 }
 
+.modal-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	img {
+		margin-bottom: 30px;
+	}
+
+	h4 {
+		margin: 0px;
+		width: 250px;
+
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		word-break: break-word;
+		text-align: center;
+	}
+
+	p {
+		margin-top: 30px;
+		width: 200px;
+
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		word-break: break-word;
+		text-align: center;
+
+		a {
+			text-decoration: underline;
+			color: #1B3847;
+		}
+	}
+}
