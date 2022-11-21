@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Card from 'react-bootstrap/Card'
 import Modal from 'react-bootstrap/Modal'
 import { useNavigate } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 const ProductsPage = () => {
 	const navigate = useNavigate()
@@ -120,20 +121,13 @@ const ProductsPage = () => {
 					</Card>
 				</div>
 
-
 				<button className='button' onClick={() => {
-					navigate("/produkter")
+					navigate("/kalender")
 				}}>
 					<p> Välj datum </p>
 				</button>
 
-				<div className="footer">
-					<img src="../public/assets/arrow-left-solid.svg" alt="arrow left" onClick={() => {navigate(-1)}}/>
-
-					<div> 2 / 5 </div>
-
-					<img src="../public/assets/bars-solid.svg" alt="hamburger icon" />
-				</div>
+				<Footer page={2} />
 			</div>
 
 
