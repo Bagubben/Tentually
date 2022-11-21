@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-// import CalenderPage from './pages/CalenderPage'
+import CalendarPage from './pages/CalendarPage'
 // import ConfirmPage from './pages/ConfirmPage'
 import LandingPage from './pages/LandingPage'
 import ProductsPage from './pages/ProductsPage'
@@ -12,7 +12,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={ <LandingPage />} />
 				<Route path="/produkter" element={ <ProductsPage />} />
-				{/* <Route path="/kalender" element={ <CalenderPage />} /> */}
+				<Route path="/kalender" element={ <CalendarPage />} />
 				{/* <Route path="/bekräfta" element={ <ConfirmPage />} /> */}
 			</Routes>
 		</div>
