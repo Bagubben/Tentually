@@ -3,14 +3,18 @@ import Accordion from 'react-bootstrap/Accordion'
 import Calendar from 'react-calendar'
 import Footer from '../components/Footer'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { increase, decrease } from '../features/products/tentSlice'
 import React from 'react'
 
 const CalendarPage = () => {
+	const dispatch = useDispatch()
 	const navigate = useNavigate()
 	const [value, onChange] = useState(new Date())
 	const [accordionOpen, setAccordionOpen] = useState(false)
 
-	const [tentCount, setTentCount] = useState(0)
+	const tentCount = useSelector(state => state.tent.tentCount)
+
 	const [tableCount, setTableCount] = useState(0)
 	const [benchCount, setBenchCount] = useState(0)
 	const [plateCount, setPlateCount] = useState(0)
@@ -41,16 +45,18 @@ const CalendarPage = () => {
 						<h4> <u> Partytält 1 / 1 </u> </h4>
 						<div className="counter">
 							<button className="counterButton" onClick={() => {
-									setTentCount(tentCount - 1)
+									dispatch( decrease() )
 								}}
-								disabled={tentCount <= 0}>
+								disabled={tentCount <= 0}
+								>
 								<img src="/assets/minus-solid.svg" alt="minus icon" />
 							</button>
 							<div className="countNumber"> {tentCount} </div>
 							<button className="counterButton" onClick={() => {
-								setTentCount(tentCount + 1)
+								dispatch( increase() )
 							}}
-							disabled={tentCount >= 1}>
+							disabled={tentCount >= 1}
+							>
 								<img src="/assets/plus-solid.svg" alt="plus icon" />
 							</button>
 						</div>
