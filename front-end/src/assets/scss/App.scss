@@ -5,6 +5,7 @@
 
 /* Colors related to Frontwalker */
 $base-color-darkblue: #1B3847;
+$base-color-lightblue: #597789;
 $base-color-bronze: #BA9657;
 
 /* Genral styles */
@@ -34,6 +35,24 @@ button {
 		color: white;
 		font-size: 24px;
 		margin: 0px;
+	}
+}
+
+.footer {
+	// position: absolute;
+	// bottom: 10px;
+	margin-top: 10px;
+	width: 90%;
+	font-size: 20px;
+
+	color: #1B3847;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	img {
+		height: 30px;
+		width: 30px;
 	}
 }
 
@@ -94,6 +113,7 @@ button {
 
 		bottom: 10px;
 		font-size: 20px;
+		width: 10%;
 	}
 }
 
@@ -153,23 +173,6 @@ button {
 			width: 30px;
 		}
 	}
-
-	.footer {
-		position: absolute;
-		bottom: 10px;
-		width: 90%;
-		font-size: 20px;
-
-		color: #1B3847;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
-		img {
-			height: 30px;
-			width: 30px;
-		}
-	}
 }
 
 .modal-info {
@@ -204,5 +207,82 @@ button {
 			text-decoration: underline;
 			color: #1B3847;
 		}
+	}
+}
+
+/* Calendar styles */
+.calendar {
+	width: 100vw;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.accordion {
+		margin: 5px 0px 5px 0px;
+		width: 90%;
+
+		button {
+			font-family: 'Public Sans', sans-serif;
+			font-size: 20px;
+		}
+
+		.accordion-body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.counter {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 150px;
+
+			img {
+				height: 30px;
+				width: 30px;
+			}
+
+			.countNumber {
+				font-size: 30px;
+			}
+
+			.counterButton {
+				background-color: #ffffff;
+				border: none;
+
+				padding: 10px;
+				width: 50%;
+			}
+		}
+	}
+}
+
+.react-calendar {
+	width: 100%;
+	line-height: initial;
+
+	button {
+		background-color: #fbfbfb;
+	}
+
+	.react-calendar__navigation {
+		display: flex;
+		margin: auto;
+		width: 90%;
+		height: 60px;
+		margin-bottom: 5px;
+
+		button {
+			background-color: #597789;
+			color: white;
+		}
+	}
+
+	.react-calendar__viewContainer {
+		width: 90%;
+		margin: auto;
 	}
 }
