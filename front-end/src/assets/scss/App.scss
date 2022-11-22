@@ -286,3 +286,24 @@ button {
 		margin: auto;
 	}
 }
+
+/* Booking overview styles */
+.booking-overview {
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.your-booking {
+		width: 90%;
+
+		background-color: #DFDFDF;
+
+		.muted {
+			font-size: 18px;
+
+			color: #7A7A7A;
+		}
+	}
+}
