@@ -30,7 +30,7 @@ const ProductsPage = () => {
 				</Modal.Header>
 				<Modal.Body>
 					<div className="modal-info">
-						<img src="../public/assets/image-regular.svg" alt="image-icon" />
+						<img src="/assets/image-regular.svg" alt="image-icon" />
 						<h4>Partytält för upp till 12 personer</h4>
 						<h4>Mått: 6x3 meter</h4>
 						<p>
@@ -48,7 +48,7 @@ const ProductsPage = () => {
 				</Modal.Header>
 				<Modal.Body>
 					<div className="modal-info">
-						<img src="../public/assets/image-regular.svg" alt="image-icon" />
+						<img src="/assets/image-regular.svg" alt="image-icon" />
 						<h4>Vikbord 180x76, 2st</h4>
 						<h4>Sittbänk 183x43, 4st</h4>
 						<h4>max 400kg</h4>
@@ -62,7 +62,7 @@ const ProductsPage = () => {
 				</Modal.Header>
 				<Modal.Body>
 					<div className="modal-info">
-						<img src="../public/assets/image-regular.svg" alt="image-icon" />
+						<img src="/assets/image-regular.svg" alt="image-icon" />
 						<h4>Middagstallrikar - 50st </h4>
 						<h4>Assietter - 50st </h4>
 						<h4>Champagneglas - 50st </h4>
@@ -80,7 +80,7 @@ const ProductsPage = () => {
 				</Modal.Header>
 				<Modal.Body>
 					<div className="modal-info">
-						<img src="../public/assets/image-regular.svg" alt="image-icon" />
+						<img src="/assets/image-regular.svg" alt="image-icon" />
 						<h4>4G INTERNETROUTER</h4>
 						<h4>Fri att låna med 100GB surf per månad</h4>
 					</div>
@@ -96,28 +96,28 @@ const ProductsPage = () => {
 						handleShowTält()
 					}}>
 						<h4>Tält information</h4>
-						<img src="../public/assets/info-solid.svg" alt="" />
+						<img src="/assets/info-solid.svg" alt="" />
 					</Card>
 
 					<Card onClick={() => {
 						handleShowBord()
 					}}>
 						<h4>Bord information</h4>
-						<img src="../public/assets/info-solid.svg" alt="" />
+						<img src="/assets/info-solid.svg" alt="" />
 					</Card>
 
 					<Card onClick={() => {
 						handleShowPorslin()
 					}}>
 						<h4>Porslin information</h4>
-						<img src="../public/assets/info-solid.svg" alt="" />
+						<img src="/assets/info-solid.svg" alt="" />
 					</Card>
 
 					<Card onClick={() => {
 						handleShowRouter()
 					}}>
 						<h4>Router information</h4>
-						<img src="../public/assets/info-solid.svg" alt="" />
+						<img src="/assets/info-solid.svg" alt="" />
 					</Card>
 				</div>
 
