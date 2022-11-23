@@ -4,8 +4,16 @@ import Calendar from 'react-calendar'
 import Footer from '../components/Footer'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { increase, decrease } from '../features/products/tentSlice'
-import React from 'react'
+import { increase as tentIncrease, decrease as tentDecrease } from '../features/products/TentSlice'
+import { increase as tableIncrease, decrease as tableDecrease} from '../features/products/TableSlice'
+import { increase as benchIncrease, decrease as benchDecrease} from '../features/products/BenchSlice'
+import { increase as plateIncrease, decrease as plateDecrease} from '../features/products/PlateSlice'
+import { increase as cutleryIncrease, decrease as cutleryDecrease} from '../features/products/CutlerySlice'
+import { increase as partyclipsIncrease, decrease as partyclipsDecrease} from '../features/products/PartyclipsSlice'
+import { increase as champagneglassIncrease, decrease as champagneglassDecrease} from '../features/products/ChampagneglassSlice'
+import { increase as wineglassIncrease, decrease as wineglassDecrease} from '../features/products/WineglassSlice'
+import { increase as shotglassIncrease, decrease as shotglassDecrease} from '../features/products/ShotglassSlice'
+import { increase as routerIncrease, decrease as routerDecrease} from '../features/products/RouterSlice'
 
 const CalendarPage = () => {
 	const dispatch = useDispatch()
@@ -14,16 +22,15 @@ const CalendarPage = () => {
 	const [accordionOpen, setAccordionOpen] = useState(false)
 
 	const tentCount = useSelector(state => state.tent.tentCount)
-
-	const [tableCount, setTableCount] = useState(0)
-	const [benchCount, setBenchCount] = useState(0)
-	const [plateCount, setPlateCount] = useState(0)
-	const [cutleryCount, setCutleryCount] = useState(0)
-	const [partyclipsCount, setPartyclipsCount] = useState(0)
-	const [champagneglassCount, setChampagneglassCount] = useState(0)
-	const [wineglassCount, setWineglassCount] = useState(0)
-	const [shotglassCount, setShotglassCount] = useState(0)
-	const [routerCount, setRouterCount] = useState(0)
+	const tableCount = useSelector(state => state.table.tableCount)
+	const benchCount = useSelector(state => state.bench.benchCount)
+	const plateCount = useSelector(state => state.plate.plateCount)
+	const cutleryCount = useSelector(state => state.cutlery.cutleryCount)
+	const partyclipsCount = useSelector(state => state.partyclips.partyclipsCount)
+	const champagneglassCount = useSelector(state => state.champagneglass.champagneglassCount)
+	const wineglassCount = useSelector(state => state.wineglass.wineglassCount)
+	const shotglassCount = useSelector(state => state.shotglass.shotglassCount)
+	const routerCount = useSelector(state => state.router.routerCount)
 
 	return (
 		<div className='calendar'>
@@ -45,7 +52,7 @@ const CalendarPage = () => {
 						<h4> <u> Partytält 1 / 1 </u> </h4>
 						<div className="counter">
 							<button className="counterButton" onClick={() => {
-									dispatch( decrease() )
+									dispatch( tentDecrease() )
 								}}
 								disabled={tentCount <= 0}
 								>
@@ -53,7 +60,7 @@ const CalendarPage = () => {
 							</button>
 							<div className="countNumber"> {tentCount} </div>
 							<button className="counterButton" onClick={() => {
-								dispatch( increase() )
+								dispatch( tentIncrease() )
 							}}
 							disabled={tentCount >= 1}
 							>
@@ -76,14 +83,14 @@ const CalendarPage = () => {
 					<h4> <u> Vikbord 2 / 2 </u> </h4>
 						<div className="counter">
 							<button className="counterButton" onClick={() => {
-									setTableCount(tableCount - 1)
+									dispatch( tableDecrease() )
 								}}
 								disabled={tableCount <= 0}>
 								<img src="/assets/minus-solid.svg" alt="minus icon" />
 							</button>
 							<div className="countNumber"> {tableCount} </div>
 							<button className="counterButton" onClick={() => {
-								setTableCount(tableCount + 1)
+								dispatch( tableIncrease() )
 							}}
 							disabled={tableCount >= 2}>
 								<img src="/assets/plus-solid.svg" alt="plus icon" />
@@ -93,14 +100,14 @@ const CalendarPage = () => {
 						<h4> <u> Sittbänk 4 / 4 </u> </h4>
 						<div className="counter">
 							<button className="counterButton" onClick={() => {
-									setBenchCount(benchCount - 1)
+									dispatch( benchDecrease() )
 								}}
 								disabled={benchCount <= 0}>
 								<img src="../public/assets/minus-solid.svg" alt="minus icon" />
 							</button>
 							<div className="countNumber"> {benchCount} </div>
 							<button className="counterButton" onClick={() => {
-								setBenchCount(benchCount + 1)
+								dispatch( benchIncrease() )
 							}}
 							disabled={benchCount >= 4}>
 								<img src="../public/assets/plus-solid.svg" alt="plus icon" />
@@ -122,14 +129,14 @@ const CalendarPage = () => {
 						<h4> <u> Tallrikar 50 / 50 </u> </h4>
 						<div className="counter">
 							<button className="counterButton" onClick={() => {
-									setPlateCount(plateCount - 1)
+									dispatch( plateDecrease() )
 								}}
 								disabled={plateCount <= 0}>
 								<img src="/assets/minus-solid.svg" alt="minus icon" />
 							</button>
 							<div className="countNumber"> {plateCount} </div>
 							<button className="counterButton" onClick={() => {
-								setPlateCount(plateCount + 1)
+								dispatch( plateIncrease() )
 							}}
 							disabled={plateCount >= 50}>
 								<img src="/assets/plus-solid.svg" alt="plus icon" />
@@ -138,14 +145,14 @@ const CalendarPage = () => {
 						<h4> <u> Bestick 50 / 50 </u> </h4>
 						<div className="counter">
 							<button className="counterButton" onClick={() => {
-									setCutleryCount(cutleryCount - 1)
+									dispatch( cutleryDecrease() )
 								}}
 								disabled={cutleryCount <= 0}>
 								<img src="/assets/minus-solid.svg" alt="minus icon" />
 							</button>
 							<div className="countNumber"> {cutleryCount} </div>
 							<button className="counterButton" onClick={() => {
-								setCutleryCount(cutleryCount + 1)
+								dispatch( cutleryIncrease() )
 							}}
 							disabled={cutleryCount >= 50}>
 								<img src="/assets/plus-solid.svg" alt="plus icon" />
@@ -154,14 +161,14 @@ const CalendarPage = () => {
 						<h4> <u> Partyclips 100 / 100 </u> </h4>
 						<div className="counter">
 							<button className="counterButton" onClick={() => {
-									setPartyclipsCount(partyclipsCount - 1)
+									dispatch( partyclipsDecrease() )
 								}}
 								disabled={partyclipsCount <= 0}>
 								<img src="/assets/minus-solid.svg" alt="minus icon" />
 							</button>
 							<div className="countNumber"> {partyclipsCount} </div>
 							<button className="counterButton" onClick={() => {
-								setPartyclipsCount(partyclipsCount + 1)
+								dispatch( partyclipsIncrease() )
 							}}
 							disabled={partyclipsCount >= 100}>
 								<img src="/assets/plus-solid.svg" alt="plus icon" />
@@ -170,14 +177,14 @@ const CalendarPage = () => {
 						<h4> <u> Champagneglas 50 / 50 </u> </h4>
 						<div className="counter">
 							<button className="counterButton" onClick={() => {
-									setChampagneglassCount(champagneglassCount - 1)
+									dispatch( champagneglassDecrease() )
 								}}
 								disabled={champagneglassCount <= 0}>
 								<img src="/assets/minus-solid.svg" alt="minus icon" />
 							</button>
 							<div className="countNumber"> {champagneglassCount} </div>
 							<button className="counterButton" onClick={() => {
-								setChampagneglassCount(champagneglassCount + 1)
+								dispatch( champagneglassIncrease() )
 							}}
 							disabled={champagneglassCount >= 50}>
 								<img src="/assets/plus-solid.svg" alt="plus icon" />
@@ -186,30 +193,30 @@ const CalendarPage = () => {
 						<h4> <u> Vinglas 50 / 50 </u> </h4>
 						<div className="counter">
 							<button className="counterButton" onClick={() => {
-									setWineglassCount(wineglassCount - 1)
+									dispatch( wineglassDecrease() )
 								}}
 								disabled={wineglassCount <= 0}>
 								<img src="/assets/minus-solid.svg" alt="minus icon" />
 							</button>
 							<div className="countNumber"> {wineglassCount} </div>
 							<button className="counterButton" onClick={() => {
-								setWineglassCount(wineglassCount + 1)
+								dispatch( wineglassIncrease() )
 							}}
 							disabled={wineglassCount >= 50}>
 								<img src="/assets/plus-solid.svg" alt="plus icon" />
 							</button>
 						</div>
-						<h4> <u> Snappsglas 50 / 50 </u> </h4>
+						<h4> <u> Snapsglas 50 / 50 </u> </h4>
 						<div className="counter">
 							<button className="counterButton" onClick={() => {
-									setShotglassCount(shotglassCount - 1)
+									dispatch( shotglassDecrease() )
 								}}
 								disabled={shotglassCount <= 0}>
 								<img src="/assets/minus-solid.svg" alt="minus icon" />
 							</button>
 							<div className="countNumber"> {shotglassCount} </div>
 							<button className="counterButton" onClick={() => {
-								setShotglassCount(shotglassCount + 1)
+								dispatch( shotglassIncrease() )
 							}}
 							disabled={shotglassCount >= 50}>
 								<img src="/assets/plus-solid.svg" alt="plus icon" />
@@ -231,14 +238,14 @@ const CalendarPage = () => {
 					<h4> <u> Router 4G (100GB) 1 / 1 </u> </h4>
 						<div className="counter">
 							<button className="counterButton" onClick={() => {
-									setRouterCount(routerCount - 1)
+									dispatch( routerDecrease() )
 								}}
 								disabled={routerCount <= 0}>
 								<img src="/assets/minus-solid.svg" alt="minus icon" />
 							</button>
 							<div className="countNumber"> {routerCount} </div>
 							<button className="counterButton" onClick={() => {
-								setRouterCount(routerCount + 1)
+								dispatch( routerIncrease() )
 							}}
 							disabled={routerCount >= 1}>
 								<img src="/assets/plus-solid.svg" alt="plus icon" />
