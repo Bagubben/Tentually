@@ -6,7 +6,7 @@
 /* Colors related to Frontwalker */
 $base-color-darkblue: #1B3847;
 $base-color-lightblue: #597789;
-$base-color-bronze: #BA9657;
+$base-color-bronze: #ba9657;
 
 /* Genral styles */
 * {
@@ -17,7 +17,7 @@ $base-color-bronze: #BA9657;
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Zilla Slab', serif;
-	color: $base-color-darkblue
+	color: $base-color-darkblue;
 }
 
 p {
@@ -301,9 +301,40 @@ button {
 		background-color: #DFDFDF;
 
 		.muted {
-			font-size: 18px;
+			font-size: 22px;
+			margin-left: 10px;
 
 			color: #7A7A7A;
 		}
+
+		.accordion {
+			--bs-accordion-bg: #DFDFDF;
+			--bs-accordion-active-bg: #DFDFDF;
+
+			button {
+				font-family: 'Public Sans', sans-serif;
+				font-size: 22px;
+			}
+
+			.accordion-body {
+				font-size: 20px;
+			}
+		}
+
+		.text {
+			margin-top: 25px;
+			margin-left: 10px;
+
+			div {
+				font-size: 22px;
+
+				font-family: 'Public Sans', sans-serif;
+			}
+		}
+
+	}
+
+	.button {
+		margin-top: 15px;
 	}
 }
