@@ -77,7 +77,7 @@ const CalendarPage = () => {
 					<Accordion.Header onClick={() => {
 						setAccordionOpen(!accordionOpen)
 					}}>
-						Bord
+						Bord och bänkar
 					</Accordion.Header>
 					<Accordion.Body>
 					<h4> <u> Vikbord 2 / 2 </u> </h4>
