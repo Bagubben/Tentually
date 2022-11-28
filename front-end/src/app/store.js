@@ -9,6 +9,8 @@ import champagneglassReducer from '../features/products/ChampagneglassSlice'
 import wineglassReducer from '../features/products/WineglassSlice'
 import shotglassReducer from '../features/products/ShotglassSlice'
 import routerReducer from '../features/products/RouterSlice'
+import startDateSlice from '../features/date/StartDateSlice'
+import endDateSlice from '../features/date/EndDateSlice'
 
 
 export const store = configureStore({
@@ -23,5 +25,7 @@ export const store = configureStore({
 		wineglass: wineglassReducer,
 		shotglass: shotglassReducer,
 		router: routerReducer,
+		startdate: startDateSlice,
+		enddate: endDateSlice,
 	},
 })
