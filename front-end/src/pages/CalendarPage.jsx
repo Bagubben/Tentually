@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Accordion from 'react-bootstrap/Accordion'
 import Calendar from 'react-calendar'
 import Footer from '../components/Footer'
@@ -14,11 +14,13 @@ import { increase as champagneglassIncrease, decrease as champagneglassDecrease}
 import { increase as wineglassIncrease, decrease as wineglassDecrease} from '../features/products/WineglassSlice'
 import { increase as shotglassIncrease, decrease as shotglassDecrease} from '../features/products/ShotglassSlice'
 import { increase as routerIncrease, decrease as routerDecrease} from '../features/products/RouterSlice'
+import { setStartDate } from '../features/date/StartDateSlice'
+import { setEndDate } from '../features/date/EndDateSlice'
 
 const CalendarPage = () => {
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
-	const [value, onChange] = useState(new Date())
+	const [value, onChange] = useState()
 	const [accordionOpen, setAccordionOpen] = useState(false)
 
 	const tentCount = useSelector(state => state.tent.tentCount)
@@ -32,13 +34,26 @@ const CalendarPage = () => {
 	const shotglassCount = useSelector(state => state.shotglass.shotglassCount)
 	const routerCount = useSelector(state => state.router.routerCount)
 
+	useEffect(() => {
+		if (value) {
+			const timestampStart = value[0].getTime()
+			const timestampEnd = value[1].getTime()
+
+			dispatch ( setStartDate(timestampStart) )
+			dispatch ( setEndDate(timestampEnd) )
+		}
+
+	}, [value])
+
 	return (
 		<div className='calendar'>
 			<h2>Välj datum och produkter</h2>
 			<Calendar
 				onChange={onChange}
+				selectRange={true}
 				value={value}
 				view="month"
+				showNeighboringMonth={false}
 			/>
 
 			<Accordion flush>
