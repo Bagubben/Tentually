@@ -60,6 +60,34 @@ button {
 	color: $base-color-bronze;
 }
 
+.text-center {
+	text-align: center;
+}
+
+.counter {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 150px;
+
+	img {
+		height: 30px;
+		width: 30px;
+	}
+
+	.countNumber {
+		font-size: 30px;
+	}
+
+	.counterButton {
+		background-color: #ffffff;
+		border: none;
+
+		padding: 10px;
+		width: 50%;
+	}
+}
+
 /* Landing page styles */
 .content {
 	height: 100vh;
@@ -233,30 +261,6 @@ button {
 			flex-direction: column;
 			align-items: center;
 		}
-
-		.counter {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			width: 150px;
-
-			img {
-				height: 30px;
-				width: 30px;
-			}
-
-			.countNumber {
-				font-size: 30px;
-			}
-
-			.counterButton {
-				background-color: #ffffff;
-				border: none;
-
-				padding: 10px;
-				width: 50%;
-			}
-		}
 	}
 }
 
@@ -284,6 +288,21 @@ button {
 	.react-calendar__viewContainer {
 		width: 90%;
 		margin: auto;
+	}
+
+	.react-calendar__tile--rangeStart {
+		background-color: #AEB1B3;
+		border-radius: 30px;
+	}
+
+	.react-calendar__tile--range {
+		background-color: #AEB1B3;
+		border-radius: 30px;
+	}
+
+	.react-calendar__tile--rangeEnd {
+		background-color: #AEB1B3;
+		border-radius: 30px;
 	}
 }
 
@@ -318,6 +337,24 @@ button {
 
 			.accordion-body {
 				font-size: 20px;
+
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				.content {
+					height: 100%;
+
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+
+				.counter {
+					button {
+						background-color: #DFDFDF;
+					}
+				}
 			}
 		}
 
