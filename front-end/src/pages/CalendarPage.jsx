@@ -34,6 +34,9 @@ const CalendarPage = () => {
 	const shotglassCount = useSelector(state => state.shotglass.shotglassCount)
 	const routerCount = useSelector(state => state.router.routerCount)
 
+	const startDate = useSelector(state => state.startdate.startDate)
+	const endDate = useSelector(state => state.enddate.endDate)
+
 	useEffect(() => {
 		if (value) {
 			const timestampStart = value[0].getTime()
@@ -44,6 +47,20 @@ const CalendarPage = () => {
 		}
 
 	}, [value])
+
+	useEffect(() => {
+		if (startDate) {
+			const convertedStartDate = new Date(startDate)
+			const convertedEndDate = new Date(endDate)
+
+			const arr = []
+
+			arr.push(convertedStartDate)
+			arr.push(convertedEndDate)
+
+			onChange(arr)
+		}
+	}, [])
 
 	return (
 		<div className='calendar'>
