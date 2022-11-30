@@ -208,8 +208,17 @@ const ConfirmBookingPage = () => {
 
 				<div className="text">
 					<div>Valt datum:</div>
-					<div>Från: {`${convertedStartDate.getDate()}/${convertedStartDate.getMonth()+1} - ${convertedStartDate.getFullYear()}`}</div>
-					<div>Till: {`${convertedEndDate.getDate()}/${convertedEndDate.getMonth()+1} - ${convertedEndDate.getFullYear()}`}</div>
+					{startDate === null ?
+					<>
+						<div>Välj ett datum på föregående sida.</div>
+					</>
+					:
+					<>
+						<div>Från: {`${convertedStartDate.getDate()}/${convertedStartDate.getMonth()+1} - ${convertedStartDate.getFullYear()}`}</div>
+						<div>Till: {`${convertedEndDate.getDate()}/${convertedEndDate.getMonth()+1} - ${convertedEndDate.getFullYear()}`}</div>
+					</>
+					}
+
 				</div>
 			</div>
 
