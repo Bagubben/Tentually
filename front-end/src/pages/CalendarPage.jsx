@@ -21,7 +21,6 @@ const CalendarPage = () => {
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
 	const [value, onChange] = useState()
-	const [accordionOpen, setAccordionOpen] = useState(false)
 
 	const tentCount = useSelector(state => state.tent.tentCount)
 	const tableCount = useSelector(state => state.table.tableCount)
@@ -75,9 +74,7 @@ const CalendarPage = () => {
 
 			<Accordion flush>
 				<Accordion.Item eventKey="0">
-					<Accordion.Header onClick={() => {
-						setAccordionOpen(!accordionOpen)
-					}}>
+					<Accordion.Header>
 						Partytält
 					</Accordion.Header>
 					<Accordion.Body>
@@ -99,16 +96,14 @@ const CalendarPage = () => {
 								<img src="/assets/plus-solid.svg" alt="plus icon" />
 							</button>
 						</div>
-						<button className="button">
+						{/* <button className="button">
 							<p>Lägg till</p>
-						</button>
+						</button> */}
 					</Accordion.Body>
 				</Accordion.Item>
 
 				<Accordion.Item eventKey="1">
-					<Accordion.Header onClick={() => {
-						setAccordionOpen(!accordionOpen)
-					}}>
+					<Accordion.Header>
 						Bord och bänkar
 					</Accordion.Header>
 					<Accordion.Body>
@@ -145,16 +140,14 @@ const CalendarPage = () => {
 								<img src="../public/assets/plus-solid.svg" alt="plus icon" />
 							</button>
 						</div>
-						<button className="button">
+						{/* <button className="button">
 							<p>Lägg till</p>
-						</button>
+						</button> */}
 					</Accordion.Body>
 				</Accordion.Item>
 
 				<Accordion.Item eventKey="2">
-					<Accordion.Header onClick={() => {
-						setAccordionOpen(!accordionOpen)
-					}}>
+					<Accordion.Header>
 						Porslin
 					</Accordion.Header>
 					<Accordion.Body>
@@ -254,16 +247,14 @@ const CalendarPage = () => {
 								<img src="/assets/plus-solid.svg" alt="plus icon" />
 							</button>
 						</div>
-						<button className="button">
+						{/* <button className="button">
 							<p>Lägg till</p>
-						</button>
+						</button> */}
 					</Accordion.Body>
 				</Accordion.Item>
 
 				<Accordion.Item eventKey="3">
-					<Accordion.Header onClick={() => {
-						setAccordionOpen(!accordionOpen)
-					}}>
+					<Accordion.Header>
 						Router
 					</Accordion.Header>
 					<Accordion.Body>
@@ -283,20 +274,18 @@ const CalendarPage = () => {
 								<img src="/assets/plus-solid.svg" alt="plus icon" />
 							</button>
 						</div>
-						<button className="button">
+						{/* <button className="button">
 							<p>Lägg till</p>
-						</button>
+						</button> */}
 					</Accordion.Body>
 				</Accordion.Item>
 			</Accordion>
 
-			{!accordionOpen && (
-				<button className='button' onClick={() => {
-					navigate("/bekräfta")
-				}}>
-					<p> Boka </p>
-				</button>
-			)}
+			<button className='button' onClick={() => {
+				navigate("/bekräfta")
+			}}>
+				<p> Boka </p>
+			</button>
 
 			<Footer page={3} />
 		</div>
