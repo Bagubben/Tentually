@@ -3,6 +3,7 @@ import CalendarPage from './pages/CalendarPage'
 import ConfirmBookingPage from './pages/ConfirmBookingPage'
 import LandingPage from './pages/LandingPage'
 import ProductsPage from './pages/ProductsPage'
+import { ToastContainer } from 'react-toastify'
 import './assets/scss/App.scss'
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
 				<Route path="/kalender" element={ <CalendarPage />} />
 				<Route path="/bekräfta" element={ <ConfirmBookingPage />} />
 			</Routes>
+
+			<ToastContainer autoClose={3000} />
 		</div>
 	)
 }
