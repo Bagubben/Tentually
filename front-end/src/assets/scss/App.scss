@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap');
 
+/* Import for the styling of the toasts */
+@import 'react-toastify/scss/main';
+@import 'toastify';
+
 /* Colors related to Frontwalker */
 $base-color-darkblue: #1B3847;
 $base-color-lightblue: #597789;
@@ -371,7 +375,20 @@ button {
 
 	}
 
-	.button {
-		margin-top: 15px;
+	Form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		width: 90%;
+		margin-top: 25px;
+
+		div {
+			width: 90%;
+		}
+
+		button {
+			margin-top: 10px;
+		}
 	}
 }
