@@ -8,6 +8,14 @@ import { increase as partyclipsIncrease, decrease as partyclipsDecrease} from '.
 import { increase as champagneglassIncrease, decrease as champagneglassDecrease} from '../features/products/ChampagneglassSlice'
 import { increase as wineglassIncrease, decrease as wineglassDecrease} from '../features/products/WineglassSlice'
 import { increase as shotglassIncrease, decrease as shotglassDecrease} from '../features/products/ShotglassSlice'
+import { setStartDate } from '../features/date/StartDateSlice'
+import { setEndDate } from '../features/date/EndDateSlice'
+
+import { db } from '../firebase'
+import { collection, addDoc, Timestamp} from 'firebase/firestore'
+import { useForm } from 'react-hook-form'
+import Form from 'react-bootstrap/Form'
+import { toast } from 'react-toastify'
 
 const ConfirmBookingPage = () => {
 	const navigate = useNavigate()
@@ -29,6 +37,28 @@ const ConfirmBookingPage = () => {
 
 	const convertedStartDate = new Date(startDate)
 	const convertedEndDate = new Date(endDate)
+
+	const { register, handleSubmit, formState: { errors }, reset } = useForm()
+	console.log("Startdate", startDate)
+
+	const onCreateBooking = async (data) => {
+		if ((startDate !== null && convertedEndDate !== null)) {
+			await addDoc(collection(db, 'bookings'), {
+				startDate: Timestamp.fromDate(convertedStartDate),
+				endDate: Timestamp.fromDate(convertedEndDate),
+				// products: ,
+				user: data.email,
+			})
+
+			toast.success("Din bokning är skapad")
+			reset()
+			dispatch( setEndDate(null) )
+			dispatch( setStartDate(null) )
+			navigate("/")
+		}
+
+		console.log("Välj datum")
+	}
 
 	return (
 		<div className="booking-overview">
@@ -222,9 +252,26 @@ const ConfirmBookingPage = () => {
 				</div>
 			</div>
 
-			<button className="button">
-				<p>Bekräfta</p>
-			</button>
+			<Form onSubmit={handleSubmit(onCreateBooking)}>
+				<Form.Group controlId="email">
+					<Form.Control
+						{...register("email", {
+							required: "Du måste ange en email",
+							minLength: {
+								value: 7,
+								message: "Du måste ange en giltig email"
+							}
+						})}
+						placeholder="Ange din email"
+						type="email"
+					/>
+					{errors.title && <div className="invalid">{errors.title.message}</div>}
+				</Form.Group>
+
+				<button className="button" type="submit">
+					<p>Bekräfta</p>
+				</button>
+			</Form>
 
 			<Footer page={4} />
 		</div>
