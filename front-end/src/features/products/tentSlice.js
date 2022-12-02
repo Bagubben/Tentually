@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createAction, createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
 	tentCount: 0,
@@ -9,6 +9,7 @@ export const tentSlice = createSlice({
 	initialState,
 	reducers: {
 		increase: (state) => {
+			console.log("Hej från increase") // Körs inte även om count ändras
 			state.tentCount += 1
 			return state
 		},
@@ -17,9 +18,16 @@ export const tentSlice = createSlice({
 			state.tentCount -= 1
 			return state
 		},
+
+		tentReset: (state)  => { // fungerar inte
+			return {
+				...state,
+				tentCount: initialState.tentCount
+			}
+		}
 	}
 })
 
-export const { increase, decrease } = tentSlice.actions
+export const { increase, decrease, tentReset } = tentSlice.actions
 
 export default tentSlice.reducer

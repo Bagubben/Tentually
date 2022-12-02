@@ -1,7 +1,9 @@
 import Accordion from 'react-bootstrap/Accordion'
 import Footer from '../components/Footer'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
+import { tentReset } from '../features/products/tentSlice'
 import { increase as plateIncrease, decrease as plateDecrease} from '../features/products/PlateSlice'
 import { increase as cutleryIncrease, decrease as cutleryDecrease} from '../features/products/CutlerySlice'
 import { increase as partyclipsIncrease, decrease as partyclipsDecrease} from '../features/products/PartyclipsSlice'
@@ -20,6 +22,7 @@ import { toast } from 'react-toastify'
 const ConfirmBookingPage = () => {
 	const navigate = useNavigate()
 	const dispatch = useDispatch()
+	const [error, setError] = useState(false)
 
 	const tentCount = useSelector(state => state.tent.tentCount)
 	const tableCount = useSelector(state => state.table.tableCount)
@@ -39,14 +42,24 @@ const ConfirmBookingPage = () => {
 	const convertedEndDate = new Date(endDate)
 
 	const { register, handleSubmit, formState: { errors }, reset } = useForm()
-	console.log("Startdate", startDate)
 
 	const onCreateBooking = async (data) => {
 		if ((startDate !== null && convertedEndDate !== null)) {
 			await addDoc(collection(db, 'bookings'), {
 				startDate: Timestamp.fromDate(convertedStartDate),
 				endDate: Timestamp.fromDate(convertedEndDate),
-				// products: ,
+				products: {
+					tent: tentCount,
+					table: tableCount,
+					bench: benchCount,
+					plate: plateCount,
+					cutlery: cutleryCount,
+					partyclips: partyclipsCount,
+					champagneglass: champagneglassCount,
+					wineglass: wineglassCount,
+					shotglass: shotglassCount,
+					router: routerCount,
+				},
 				user: data.email,
 			})
 
@@ -54,10 +67,11 @@ const ConfirmBookingPage = () => {
 			reset()
 			dispatch( setEndDate(null) )
 			dispatch( setStartDate(null) )
+			dispatch( tentReset() ) // Körs den ens?
 			navigate("/")
 		}
 
-		console.log("Välj datum")
+		setError("Du måste välja start- och slutdatum")
 	}
 
 	return (
@@ -271,6 +285,8 @@ const ConfirmBookingPage = () => {
 				<button className="button" type="submit">
 					<p>Bekräfta</p>
 				</button>
+
+				{error && (<div className="invalid">{error}</div>)}
 			</Form>
 
 			<Footer page={4} />
