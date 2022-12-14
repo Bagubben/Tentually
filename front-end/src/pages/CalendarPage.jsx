@@ -17,6 +17,10 @@ import { increase as routerIncrease, decrease as routerDecrease} from '../featur
 import { setStartDate } from '../features/date/StartDateSlice'
 import { setEndDate } from '../features/date/EndDateSlice'
 
+import { isWithinInterval } from 'date-fns'
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../firebase'
+
 const CalendarPage = () => {
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
@@ -35,6 +39,43 @@ const CalendarPage = () => {
 
 	const startDate = useSelector(state => state.startdate.startDate)
 	const endDate = useSelector(state => state.enddate.endDate)
+
+	const disabledRanges = []
+
+	const getData = async () => {
+		const ref = collection(db, 'bookings')
+		const snapshot = await getDocs(ref)
+
+		const docs = snapshot.docs.map(doc => {
+			return {
+				id: doc.id,
+				...doc.data(),
+			}
+		})
+
+		docs.map((doc) => {
+			const timestampStart = doc.startDate.seconds * 1000
+			const timestampEnd = doc.endDate.seconds * 1000
+
+			const startDate = new Date(timestampStart)
+			const endDate = new Date(timestampEnd)
+			disabledRanges.push([startDate, endDate])
+		})
+	}
+
+	const tileDisabled = ({ date, view }) => {
+		if (view === 'month') {
+			return isWithinRanges(date, disabledRanges)
+		}
+	}
+
+	const isWithinRange = (date, range) => {
+		return isWithinInterval(date, { start: range[0], end: range[1] })
+	}
+
+	const isWithinRanges = (date, ranges) => {
+		return ranges.some(range => isWithinRange(date, range))
+	}
 
 	useEffect(() => {
 		if (value) {
@@ -59,6 +100,8 @@ const CalendarPage = () => {
 
 			onChange(arr)
 		}
+
+		getData()
 	}, [])
 
 	return (
@@ -70,6 +113,7 @@ const CalendarPage = () => {
 				value={value}
 				view="month"
 				showNeighboringMonth={false}
+				tileDisabled={tileDisabled}
 			/>
 
 			<Accordion flush>
