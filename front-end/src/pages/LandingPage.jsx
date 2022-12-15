@@ -14,7 +14,9 @@ const LandingPage = () => {
 				</div>
 
 				<div className="movie-player">
-					<img className="play-icon" src="/assets/circle-play-regular.svg" alt="play-icon" />
+					<video width="240" height="240" controls>
+						<source src="/video/welcomevideo.mp4" type='video/mp4' />
+					</video>
 				</div>
 
 				<button className='button' onClick={() => {
