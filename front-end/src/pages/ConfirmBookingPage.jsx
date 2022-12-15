@@ -3,21 +3,17 @@ import Footer from '../components/Footer'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { tentReset } from '../features/products/tentSlice'
 import { increase as plateIncrease, decrease as plateDecrease} from '../features/products/PlateSlice'
 import { increase as cutleryIncrease, decrease as cutleryDecrease} from '../features/products/CutlerySlice'
 import { increase as partyclipsIncrease, decrease as partyclipsDecrease} from '../features/products/PartyclipsSlice'
 import { increase as champagneglassIncrease, decrease as champagneglassDecrease} from '../features/products/ChampagneglassSlice'
 import { increase as wineglassIncrease, decrease as wineglassDecrease} from '../features/products/WineglassSlice'
 import { increase as shotglassIncrease, decrease as shotglassDecrease} from '../features/products/ShotglassSlice'
-import { setStartDate } from '../features/date/StartDateSlice'
-import { setEndDate } from '../features/date/EndDateSlice'
 
 import { db } from '../firebase'
 import { collection, addDoc, Timestamp} from 'firebase/firestore'
 import { useForm } from 'react-hook-form'
 import Form from 'react-bootstrap/Form'
-import { toast } from 'react-toastify'
 
 const ConfirmBookingPage = () => {
 	const navigate = useNavigate()
@@ -63,12 +59,8 @@ const ConfirmBookingPage = () => {
 				user: data.email,
 			})
 
-			toast.success("Din bokning är skapad")
 			reset()
-			dispatch( setEndDate(null) )
-			dispatch( setStartDate(null) )
-			dispatch( tentReset() ) // Körs den ens?
-			navigate("/")
+			navigate("/bekräftelse")
 		}
 
 		setError("Du måste välja start- och slutdatum")
