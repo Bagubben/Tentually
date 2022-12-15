@@ -9,7 +9,6 @@ export const tentSlice = createSlice({
 	initialState,
 	reducers: {
 		increase: (state) => {
-			console.log("Hej från increase") // Körs inte även om count ändras
 			state.tentCount += 1
 			return state
 		},
@@ -19,7 +18,7 @@ export const tentSlice = createSlice({
 			return state
 		},
 
-		tentReset: (state)  => { // fungerar inte
+		tentReset: (state)  => {
 			return {
 				...state,
 				tentCount: initialState.tentCount
