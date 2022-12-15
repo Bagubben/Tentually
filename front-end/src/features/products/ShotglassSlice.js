@@ -17,9 +17,16 @@ export const shotglassSlice = createSlice({
 			state.shotglassCount -= 1
 			return state
 		},
+
+		shotglassReset: (state)  => {
+			return {
+				...state,
+				shotglassCount: initialState.shotglassCount
+			}
+		}
 	}
 })
 
-export const { increase, decrease } = shotglassSlice.actions
+export const { increase, decrease, shotglassReset } = shotglassSlice.actions
 
 export default shotglassSlice.reducer

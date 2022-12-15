@@ -17,9 +17,16 @@ export const tableSlice = createSlice({
 			state.tableCount -= 1
 			return state
 		},
+
+		tableReset: (state)  => {
+			return {
+				...state,
+				tableCount: initialState.tableCount
+			}
+		}
 	}
 })
 
-export const { increase, decrease } = tableSlice.actions
+export const { increase, decrease, tableReset } = tableSlice.actions
 
 export default tableSlice.reducer

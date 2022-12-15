@@ -17,9 +17,16 @@ export const champagneglassSlice = createSlice({
 			state.champagneglassCount -= 1
 			return state
 		},
+
+		champagneglassReset: (state)  => {
+			return {
+				...state,
+				champagneglassCount: initialState.champagneglassCount
+			}
+		}
 	}
 })
 
-export const { increase, decrease } = champagneglassSlice.actions
+export const { increase, decrease, champagneglassReset } = champagneglassSlice.actions
 
 export default champagneglassSlice.reducer

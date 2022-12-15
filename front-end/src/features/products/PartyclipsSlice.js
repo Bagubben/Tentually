@@ -17,9 +17,16 @@ export const partyclipsSlice = createSlice({
 			state.partyclipsCount -= 1
 			return state
 		},
+
+		partyclipReset: (state)  => {
+			return {
+				...state,
+				partyclipsCount: initialState.partyclipsCount
+			}
+		}
 	}
 })
 
-export const { increase, decrease } = partyclipsSlice.actions
+export const { increase, decrease, partyclipReset } = partyclipsSlice.actions
 
 export default partyclipsSlice.reducer

@@ -17,9 +17,16 @@ export const routerSlice = createSlice({
 			state.routerCount -= 1
 			return state
 		},
+
+		routerReset: (state)  => {
+			return {
+				...state,
+				routerCount: initialState.routerCount
+			}
+		}
 	}
 })
 
-export const { increase, decrease } = routerSlice.actions
+export const { increase, decrease, routerReset } = routerSlice.actions
 
 export default routerSlice.reducer

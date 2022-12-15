@@ -17,9 +17,16 @@ export const plateSlice = createSlice({
 			state.plateCount -= 1
 			return state
 		},
+
+		plateReset: (state)  => {
+			return {
+				...state,
+				plateCount: initialState.plateCount
+			}
+		}
 	}
 })
 
-export const { increase, decrease } = plateSlice.actions
+export const { increase, decrease, plateReset } = plateSlice.actions
 
 export default plateSlice.reducer

@@ -17,9 +17,16 @@ export const cutlerySlice = createSlice({
 			state.cutleryCount -= 1
 			return state
 		},
+
+		cutleryReset: (state)  => {
+			return {
+				...state,
+				cutleryCount: initialState.cutleryCount
+			}
+		}
 	}
 })
 
-export const { increase, decrease } = cutlerySlice.actions
+export const { increase, decrease, cutleryReset } = cutlerySlice.actions
 
 export default cutlerySlice.reducer

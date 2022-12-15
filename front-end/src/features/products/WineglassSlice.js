@@ -17,9 +17,16 @@ export const wineglassSlice = createSlice({
 			state.wineglassCount -= 1
 			return state
 		},
+
+		wineglassReset: (state)  => {
+			return {
+				...state,
+				wineglassCount: initialState.wineglassCount
+			}
+		}
 	}
 })
 
-export const { increase, decrease } = wineglassSlice.actions
+export const { increase, decrease, wineglassReset } = wineglassSlice.actions
 
 export default wineglassSlice.reducer

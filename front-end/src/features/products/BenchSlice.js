@@ -17,9 +17,16 @@ export const benchSlice = createSlice({
 			state.benchCount -= 1
 			return state
 		},
+
+		benchReset: (state)  => {
+			return {
+				...state,
+				benchCount: initialState.benchCount
+			}
+		}
 	}
 })
 
-export const { increase, decrease } = benchSlice.actions
+export const { increase, decrease, benchReset } = benchSlice.actions
 
 export default benchSlice.reducer

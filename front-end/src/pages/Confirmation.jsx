@@ -5,7 +5,16 @@ import { useDispatch } from 'react-redux'
 
 import { setStartDate } from '../features/date/StartDateSlice'
 import { setEndDate } from '../features/date/EndDateSlice'
+import { benchReset } from '../features/products/benchSlice'
+import { champagneglassReset } from '../features/products/ChampagneglassSlice'
+import { cutleryReset } from '../features/products/CutlerySlice'
+import { partyclipsReset } from '../features/products/PartyclipsSlice'
+import { plateReset } from '../features/products/PlateSlice'
+import { routerReset } from '../features/products/RouterSlice'
+import { shotglassReset } from '../features/products/ShotglassSlice'
+import { tableReset } from '../features/products/tableSlice'
 import { tentReset } from '../features/products/tentSlice'
+import { wineglassReset } from '../features/products/WineglassSlice'
 
 const Confirmation = () => {
 	const navigate = useNavigate()
@@ -30,7 +39,16 @@ const Confirmation = () => {
 	const handleReset = () => {
 		dispatch( setEndDate(null) )
 		dispatch( setStartDate(null) )
+		dispatch( benchReset() )
+		dispatch( champagneglassReset() )
+		dispatch( cutleryReset() )
+		dispatch( partyclipsReset() )
+		dispatch( plateReset() )
+		dispatch( routerReset() )
+		dispatch( shotglassReset() )
+		dispatch( tableReset() )
 		dispatch( tentReset() )
+		dispatch( wineglassReset() )
 		navigate("/")
 	}
 
